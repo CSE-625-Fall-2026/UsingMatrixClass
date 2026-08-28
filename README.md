@@ -97,6 +97,18 @@ time ./build-release/regular_linked_list 750000
 time ./build-release/overloaded_linked_list 750000
 ```
 
+## Profiling results
+
+These results use Release builds. Each regular and overloaded executable ran
+sequentially with the same parameters and repetition count.
+
+| Workload | Program parameters | Repetitions | Regular seconds | Overloaded seconds | Improvement |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Matrix array | Matrix size 140 with 256 matrices and 640 replacement passes | 582 | 7007 | 5921 | 15.5 percent |
+| Uniform matrix nodes | Matrix size 100 with 256 nodes and 2500 replacement passes | 455 | 7069 | 6646 | 6.0 percent |
+| Nested matrix stress | 90 rounds with matrix sizes from 16 through 256 | 317 | 7189 | 6299 | 12.4 percent |
+| Linked list | Maximum size 750000 with 150000000 operations and seed 6252026 | 355 | 6647 | 7004 | -5.4 percent |
+
 ## Questions
 
 - What do you notice as the profiling scale increases in each test case?
