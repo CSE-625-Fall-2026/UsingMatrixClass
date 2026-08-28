@@ -194,6 +194,7 @@ The improved allocator must
 - Include unit and integration tests
 - Include brief build and use instructions
 - Remain reusable by projects other than UsingMatrixClass
+- Include CMAKE MACRO directives that profile allocator behaviors (misses, searching, reuse). Find meaningful things to measure and profile. Macros must be able to turn off metric counting to avoid interfering with timing results. Note that runs rely on random seeds for reproducibility.
 
 Compare the improved
 allocator with regular `new` and the original v7.0.0 allocator. Demonstrate an
